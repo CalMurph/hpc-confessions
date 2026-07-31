@@ -2,6 +2,14 @@
   perspective: 2200px;
 }
 
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-eagle: var(--font-eagle-lake);
+}
+
 .book {
   position: relative;
   width: 1000px;
@@ -87,6 +95,7 @@
 */
 
 .rightPage {
+
 
   right:20px;
 
