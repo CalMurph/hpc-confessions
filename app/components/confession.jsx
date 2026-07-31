@@ -55,10 +55,6 @@ export default function ConfessionPage() {
       setIsEntering(false);
     });
 
-<<<<<<< HEAD
-    return () => cancelAnimationFrame(frame);
-  }, []);
-=======
         const penanceRequest = fetch("http://10.151.0.93:81/confessions", {
             method: "POST",
             headers: {
@@ -66,7 +62,6 @@ export default function ConfessionPage() {
             },
             body: JSON.stringify(payload)
         }).then((res) => res.json())
->>>>>>> efc341fa5cbfc12ff77712c972b6da2264c0ee73
 
   useEffect(() => {
     if (!confessed || penance) return;
