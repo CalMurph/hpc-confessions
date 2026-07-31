@@ -4,6 +4,7 @@ import { useRouter } from "next/navigation";
 import { useCallback, useEffect, useState } from "react";
 import { FaCross } from "react-icons/fa";
 import { FaChevronLeft } from "react-icons/fa";
+
 import verses from "./verses.json";
 
 const CONTENT_FADE_MS = 700;
@@ -55,13 +56,8 @@ export default function ConfessionPage() {
       setIsEntering(false);
     });
 
-        const penanceRequest = fetch("http://10.151.0.93:81/confessions", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(payload)
-        }).then((res) => res.json())
+    return () => cancelAnimationFrame(frame);
+  }, []);
 
   useEffect(() => {
     if (!confessed || penance) return;
@@ -87,7 +83,7 @@ export default function ConfessionPage() {
       text: confession,
     };
 
-    const penanceRequest = fetch("http://10.151.0.93/confessions", {
+    const penanceRequest = fetch("http://10.151.0.93:81/confessions", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
