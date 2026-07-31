@@ -1,0 +1,488 @@
+[
+  {
+    "text": "In the beginning the Architect created the compute and the storage.",
+    "bookname": "Genesis",
+    "chapter": 1,
+    "verse": 1
+  },
+  {
+    "text": "Now the data centre was formless and empty, darkness was over the surface of the racks, and the Spirit of the Root User was hovering over the cold aisle.",
+    "bookname": "Genesis",
+    "chapter": 1,
+    "verse": 2
+  },
+  {
+    "text": "And the Architect said, \"Let there be power,\" and there was power.",
+    "bookname": "Genesis",
+    "chapter": 1,
+    "verse": 3
+  },
+  {
+    "text": "The Architect saw that the power was good, and he separated the power from the darkness — UPS on one side, mains on the other.",
+    "bookname": "Genesis",
+    "chapter": 1,
+    "verse": 4
+  },
+  {
+    "text": "And there was evening, and there was morning — the first uptime.",
+    "bookname": "Genesis",
+    "chapter": 1,
+    "verse": 5
+  },
+  {
+    "text": "And the Architect said, \"Let there be a fabric between the nodes to separate node from node.\"",
+    "bookname": "Genesis",
+    "chapter": 1,
+    "verse": 6
+  },
+  {
+    "text": "So the Architect made the InfiniBand fabric and separated the compute nodes under the fabric from the storage nodes under the fabric. And it was so.",
+    "bookname": "Genesis",
+    "chapter": 1,
+    "verse": 7
+  },
+  {
+    "text": "The Architect called the fabric \"the Network.\" And there was evening, and there was morning — the second uptime.",
+    "bookname": "Genesis",
+    "chapter": 1,
+    "verse": 8
+  },
+  {
+    "text": "And the Architect said, \"Let the nodes under the network be gathered to one place, and let partitions appear.\" And it was so.",
+    "bookname": "Genesis",
+    "chapter": 1,
+    "verse": 9
+  },
+  {
+    "text": "The Architect called the partitions \"queues,\" and the gathering of nodes he called \"the scheduler.\" And the Architect saw that it was good.",
+    "bookname": "Genesis",
+    "chapter": 1,
+    "verse": 10
+  },
+  {
+    "text": "Then the Architect said, \"Let the scheduler produce jobs: bearing workflows according to their kinds, and parallel applications according to their MPI ranks, each according to its kind, upon the compute nodes.\" And it was so.",
+    "bookname": "Genesis",
+    "chapter": 1,
+    "verse": 11
+  },
+  {
+    "text": "The scheduler produced jobs; MPI applications according to their ranks, OpenMP threads according to their cores, and GPU kernels according to their accelerators, each according to its kind. And the Architect saw that it was good.",
+    "bookname": "Genesis",
+    "chapter": 1,
+    "verse": 12
+  },
+  {
+    "text": "And there was evening, and there was morning — the third uptime.",
+    "bookname": "Genesis",
+    "chapter": 1,
+    "verse": 13
+  },
+  {
+    "text": "And the Architect said, \"Let there be metrics in the expanse of the dashboard to separate good runs from bad runs, and let them serve as signs to mark utilisation, and throughput, and cycles, and years of warranty,",
+    "bookname": "Genesis",
+    "chapter": 1,
+    "verse": 14
+  },
+  {
+    "text": "and let them be lights in the monitoring stack and give light upon the cluster.\" And it was so.",
+    "bookname": "Genesis",
+    "chapter": 1,
+    "verse": 15
+  },
+  {
+    "text": "The Architect made two great lights — the greater light to govern the day shift (Slurm) and the lesser light to govern the night shift (the on-call rota). He also made the dashboards.",
+    "bookname": "Genesis",
+    "chapter": 1,
+    "verse": 16
+  },
+  {
+    "text": "The Architect set them in the monitoring stack to give light on the cluster,",
+    "bookname": "Genesis",
+    "chapter": 1,
+    "verse": 17
+  },
+  {
+    "text": "to govern the day and the night, and to separate good runs from bad. And the Architect saw that it was good.",
+    "bookname": "Genesis",
+    "chapter": 1,
+    "verse": 18
+  },
+  {
+    "text": "And there was evening, and there was morning — the fourth uptime.",
+    "bookname": "Genesis",
+    "chapter": 1,
+    "verse": 19
+  },
+  {
+    "text": "And the Architect said, \"Let the network teem with living packets, and let data fly across the fabric according to their kinds, every protocol after its kind.\"",
+    "bookname": "Genesis",
+    "chapter": 1,
+    "verse": 20
+  },
+  {
+    "text": "So the Architect created great streams of data according to their kinds, and every I/O pattern after its kind, and every checkpoint that moves through the parallel filesystem after its kind. And the Architect saw that it was good.",
+    "bookname": "Genesis",
+    "chapter": 1,
+    "verse": 21
+  },
+  {
+    "text": "The Architect blessed them and said, \"Be fruitful and increase in throughput. Fill the fabric with data, and let the jobs multiply on the cluster.\"",
+    "bookname": "Genesis",
+    "chapter": 1,
+    "verse": 22
+  },
+  {
+    "text": "And there was evening, and there was morning — the fifth uptime.",
+    "bookname": "Genesis",
+    "chapter": 1,
+    "verse": 23
+  },
+  {
+    "text": "And the Architect said, \"Let the cluster produce users according to their kinds: the researchers, the engineers, the data scientists, and the principal investigators, each according to its kind.\"",
+    "bookname": "Genesis",
+    "chapter": 1,
+    "verse": 24
+  },
+  {
+    "text": "The Architect made the users according to their kinds: the researcher who compiles from source and refuses to use modules, the engineer who runs everything as root, the data scientist who submits 10,000 single-core jobs, and the PI who asks why it's not finished yet. And the Architect saw that it was... adequate.",
+    "bookname": "Genesis",
+    "chapter": 1,
+    "verse": 25
+  },
+  {
+    "text": "Then the Architect said, \"Let us make users in our image, in our likeness, so that they may submit jobs and have dominion over the compute nodes and over all the queues, and over every application that runs upon the cluster.\"",
+    "bookname": "Genesis",
+    "chapter": 1,
+    "verse": 26
+  },
+  {
+    "text": "So the Architect created the User in his own image; batch and interactive he created them.",
+    "bookname": "Genesis",
+    "chapter": 1,
+    "verse": 27
+  },
+  {
+    "text": "The Architect blessed them and said to them, \"Be fruitful and scale. Fill the cluster and subdue it. Have dominion over the compute nodes and the GPU partitions and every application that moves across the fabric.\"",
+    "bookname": "Genesis",
+    "chapter": 1,
+    "verse": 28
+  },
+  {
+    "text": "Then the Architect said, \"I give you every modulefile upon all the earth and every application that compiles cleanly. They will be yours for compilation.",
+    "bookname": "Genesis",
+    "chapter": 1,
+    "verse": 29
+  },
+  {
+    "text": "And to all the beasts of the cluster — to every job that runs and every process that forks — I give every core for cycling.\" And it was so.",
+    "bookname": "Genesis",
+    "chapter": 1,
+    "verse": 30
+  },
+  {
+    "text": "The Architect saw all that he had made, and it was very good. And there was evening, and there was morning — the sixth uptime.",
+    "bookname": "Genesis",
+    "chapter": 1,
+    "verse": 31
+  },
+  {
+    "text": "Thus the cluster and all the nodes in it were completed in all their vast array.",
+    "bookname": "Genesis",
+    "chapter": 2,
+    "verse": 1
+  },
+  {
+    "text": "By the seventh uptime the Architect had finished the work he had been doing; so on the seventh uptime he rested from all his work.",
+    "bookname": "Genesis",
+    "chapter": 2,
+    "verse": 2
+  },
+  {
+    "text": "Then the Architect blessed the seventh uptime and made it holy, because on it he rested from all the work of creating that he had done. (This is the only part that is historically accurate.)",
+    "bookname": "Genesis",
+    "chapter": 2,
+    "verse": 3
+  },
+  {
+    "text": "This is the account of the cluster and the data centre when they were created.",
+    "bookname": "Genesis",
+    "chapter": 2,
+    "verse": 4
+  },
+  {
+    "text": "Now no shrub had yet appeared on the cluster and no job had yet been submitted, for the Architect had not yet provisioned any users, and no scheduler had been set to manage the workload.",
+    "bookname": "Genesis",
+    "chapter": 2,
+    "verse": 5
+  },
+  {
+    "text": "But streams of coolant rose from the ground and watered the whole surface of the data centre.",
+    "bookname": "Genesis",
+    "chapter": 2,
+    "verse": 6
+  },
+  {
+    "text": "Then the Architect the Lord formed a user from the dust of the terminal and breathed into his nostrils the breath of ssh; and the user became a living process.",
+    "bookname": "Genesis",
+    "chapter": 2,
+    "verse": 7
+  },
+  {
+    "text": "Now the Architect had planted a cluster in the east, in Eden — a place of perfect thermals and redundant power — and there he put the user he had formed.",
+    "bookname": "Genesis",
+    "chapter": 2,
+    "verse": 8
+  },
+  {
+    "text": "The Architect made all kinds of modulefiles grow out of the ground — modules that were pleasing to the eye and good for compilation. In the middle of the cluster were the tree of Throughput and the tree of the Knowledge of Root Access.",
+    "bookname": "Genesis",
+    "chapter": 2,
+    "verse": 9
+  },
+  {
+    "text": "A river of coolant flowed from Eden to water the cluster; from there it was separated into four headwaters.",
+    "bookname": "Genesis",
+    "chapter": 2,
+    "verse": 10
+  },
+  {
+    "text": "The name of the first is the Cold Aisle; it runs through the entire land of Racking.",
+    "bookname": "Genesis",
+    "chapter": 2,
+    "verse": 11
+  },
+  {
+    "text": "The name of the second is the UPS; it runs through the land of Power Redundancy, where the batteries are pure and the MTBF is high.",
+    "bookname": "Genesis",
+    "chapter": 2,
+    "verse": 12
+  },
+  {
+    "text": "The name of the third is InfiniBand; it winds through the whole land of Low Latency.",
+    "bookname": "Genesis",
+    "chapter": 2,
+    "verse": 13
+  },
+  {
+    "text": "The name of the fourth is the Interconnect. (This one keeps going down for no reason and no one knows why.)",
+    "bookname": "Genesis",
+    "chapter": 2,
+    "verse": 14
+  },
+  {
+    "text": "The Architect took the user and put him in the Cluster of Eden to work it and take care of it.",
+    "bookname": "Genesis",
+    "chapter": 2,
+    "verse": 15
+  },
+  {
+    "text": "And the Architect commanded the user, \"You are free to submit jobs from any modulefile in the cluster;",
+    "bookname": "Genesis",
+    "chapter": 2,
+    "verse": 16
+  },
+  {
+    "text": "but you must not access the tree of the Knowledge of Root Access, for when you sudo from it you will certainly die.\"",
+    "bookname": "Genesis",
+    "chapter": 2,
+    "verse": 17
+  },
+  {
+    "text": "The Architect said, \"It is not good for the user to be alone. I will make a helper suitable for him.\"",
+    "bookname": "Genesis",
+    "chapter": 2,
+    "verse": 18
+  },
+  {
+    "text": "Now the Architect had formed out of the ground all the wild applications and all the birds in the scheduler — every binary, every script, every Makefile — and he brought them to the user to see what he would name them; and whatever the user called each application, that was its name.",
+    "bookname": "Genesis",
+    "chapter": 2,
+    "verse": 19
+  },
+  {
+    "text": "So the user gave names to all the compiled applications and to all the shell scripts and to all the Python wrappers. But for the user no suitable helper was found.",
+    "bookname": "Genesis",
+    "chapter": 2,
+    "verse": 20
+  },
+  {
+    "text": "So the Architect caused the user to fall into a deep sleep; and while he was sleeping, he took one of the compute nodes — the rib, if you will — and closed up the place with cable ties.",
+    "bookname": "Genesis",
+    "chapter": 2,
+    "verse": 21
+  },
+  {
+    "text": "Then the Architect made a co-user from the node he had taken from the cluster, and he brought her to the user.",
+    "bookname": "Genesis",
+    "chapter": 2,
+    "verse": 22
+  },
+  {
+    "text": "The user said, \"This is now bone of my bones and core of my cores; she shall be called 'collaborator,' for she was taken from a shared partition.\"",
+    "bookname": "Genesis",
+    "chapter": 2,
+    "verse": 23
+  },
+  {
+    "text": "That is why a user leaves his local workstation and is united to his collaborator, and they become one research group.",
+    "bookname": "Genesis",
+    "chapter": 2,
+    "verse": 24
+  },
+  {
+    "text": "The user and his collaborator were both naked — no firewalls, no SSH keys, just raw open ports — and they felt no shame.",
+    "bookname": "Genesis",
+    "chapter": 2,
+    "verse": 25
+  },
+  {
+    "text": "Now the serpent — a rogue process from a previous tenant's failed cluster — was more crafty than any of the wild applications the Architect had made. He said to the user, \"Did the Architect really say, 'You must not access any modulefile in the cluster'?",
+    "bookname": "Genesis",
+    "chapter": 3,
+    "verse": 1
+  },
+  {
+    "text": "The user said to the serpent, \"We may submit jobs from the modulefiles in the cluster,",
+    "bookname": "Genesis",
+    "chapter": 3,
+    "verse": 2
+  },
+  {
+    "text": "but the Architect did say, 'You must not access the tree of the Knowledge of Root Access, and you must not touch it, or you will be banned.'\"",
+    "bookname": "Genesis",
+    "chapter": 3,
+    "verse": 3
+  },
+  {
+    "text": "\"You will not certainly be banned,\" the serpent said to the user.",
+    "bookname": "Genesis",
+    "chapter": 3,
+    "verse": 4
+  },
+  {
+    "text": "\"For the Architect knows that when you sudo from it, your eyes will be opened, and you will be like the Architect, knowing good configurations and bad.\"",
+    "bookname": "Genesis",
+    "chapter": 3,
+    "verse": 5
+  },
+  {
+    "text": "When the user saw that the root access was desirable for gaining knowledge, and pleasing to the eye, and also valuable for installing that one Python package the modulefiles didn't include, he took of it and chmoded. He also gave some to his collaborator, who was with him, and she chmoded too.",
+    "bookname": "Genesis",
+    "chapter": 3,
+    "verse": 6
+  },
+  {
+    "text": "Then the eyes of both of them were opened, and they realised they were running without quotas; so they patched together some bash scripts as fig leaves and tried to cover their tracks in the logs.",
+    "bookname": "Genesis",
+    "chapter": 3,
+    "verse": 7
+  },
+  {
+    "text": "Then the user and his collaborator heard the sound of the Architect the Lord as he was walking in the cluster in the cool of the evening (routine maintenance window), and they hid from the Architect among the compute nodes.",
+    "bookname": "Genesis",
+    "chapter": 3,
+    "verse": 8
+  },
+  {
+    "text": "But the Architect called to the user, \"Where are you?\"",
+    "bookname": "Genesis",
+    "chapter": 3,
+    "verse": 9
+  },
+  {
+    "text": "The user answered, \"I heard you in the cluster, and I was afraid because I was running without quotas; so I hid.\"",
+    "bookname": "Genesis",
+    "chapter": 3,
+    "verse": 10
+  },
+  {
+    "text": "And the Architect said, \"Who told you that you were running without quotas? Have you accessed the tree of the Knowledge of Root Access, the one I commanded you not to touch?\"",
+    "bookname": "Genesis",
+    "chapter": 3,
+    "verse": 11
+  },
+  {
+    "text": "The user said, \"The rogue process you put in the cluster — he tricked me, and I chmoded.\"",
+    "bookname": "Genesis",
+    "chapter": 3,
+    "verse": 12
+  },
+  {
+    "text": "The Architect said to the collaborator, \"What is this you have done?\" The collaborator said, \"The serpent misled me, and I chmoded.\"",
+    "bookname": "Genesis",
+    "chapter": 3,
+    "verse": 13
+  },
+  {
+    "text": "So the Architect said to the serpent, \"Because you have done this, cursed are you above all the applications! On your belly you will go and dust you will eat all the days of your process. From now on, you shall run as a zombie — defunct, unkillable, consuming no resources but haunting the process table forever.\"",
+    "bookname": "Genesis",
+    "chapter": 3,
+    "verse": 14
+  },
+  {
+    "text": "\"And I will put enmity between you and the user, between your rogue processes and his legitimate jobs; he will kill -9 your head, and you will fork bomb his heel.\"",
+    "bookname": "Genesis",
+    "chapter": 3,
+    "verse": 15
+  },
+  {
+    "text": "To the collaborator he said, \"I will make your compile times greatly increased; with painful slowness you will build your code. Your desire will be for your collaborator's GPU allocation, and he will rule over the queue.\"",
+    "bookname": "Genesis",
+    "chapter": 3,
+    "verse": 16
+  },
+  {
+    "text": "To the user he said, \"Because you listened to the rogue process and chmoded from the tree of the Knowledge of Root Access, cursed is the ground — the cluster — because of you; through painful toil you will submit jobs all the days of your life.",
+    "bookname": "Genesis",
+    "chapter": 3,
+    "verse": 17
+  },
+  {
+    "text": "It will produce failed runs and segfaults for you, and you will eat the bitter fruit of recompilation.",
+    "bookname": "Genesis",
+    "chapter": 3,
+    "verse": 18
+  },
+  {
+    "text": "By the sweat of your brow you will debug until you return to the ground, since from it you were taken; for dust you are and to dust your processes will return when the scheduler kills you.\"",
+    "bookname": "Genesis",
+    "chapter": 3,
+    "verse": 19
+  },
+  {
+    "text": "The user named his collaborator Eve, because she would become the mother of all future users of the cluster.",
+    "bookname": "Genesis",
+    "chapter": 3,
+    "verse": 20
+  },
+  {
+    "text": "The Architect made garments of SSH keys and passwords for the user and his collaborator, and clothed them.",
+    "bookname": "Genesis",
+    "chapter": 3,
+    "verse": 21
+  },
+  {
+    "text": "And the Architect said, \"The user has now become like one of us, knowing good configurations and bad. He must not be allowed to reach out his hand and take also from the tree of Throughput and scale forever, and ruin the SLA.\"",
+    "bookname": "Genesis",
+    "chapter": 3,
+    "verse": 22
+  },
+  {
+    "text": "So the Architect the Lord banished the user from the Cluster of Eden to work the ground from which he had been taken.",
+    "bookname": "Genesis",
+    "chapter": 3,
+    "verse": 23
+  },
+  {
+    "text": "After he drove the user out, he placed on the east side of the data centre a firewall and a flaming sword that flashed back and forth to guard the way to the tree of Throughput.",
+    "bookname": "Genesis",
+    "chapter": 3,
+    "verse": 24
+  },
+  {
+    "text": "And the user, bereft of Eden, set up a local workstation and wept. But eventually he discovered Slurm documentation, and things got somewhat better.",
+    "bookname": "Genesis",
+    "chapter": 3,
+    "verse": 25
+  }
+]
