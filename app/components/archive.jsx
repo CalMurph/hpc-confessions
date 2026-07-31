@@ -3,6 +3,9 @@
 import { useEffect, useState, useRef } from "react";
 import { useRouter } from "next/navigation";
 import styles from "../archive/book.module.css";
+import { FaCross } from "react-icons/fa";
+
+const PAGE_FADE_MS = 1500;
 
 export default function Archive() {
   const [confessions, setConfessions] = useState([]);
@@ -11,6 +14,8 @@ export default function Archive() {
   const [page, setPage] = useState(0);
   const [turning, setTurning] = useState(false);
   const [deleting, setDeleting] = useState(false);
+  const [isEntering, setIsEntering] = useState(true);
+  const [isLeaving, setIsLeaving] = useState(false);
 
   const pageTurnSound = useRef(null);
 
@@ -25,9 +30,17 @@ export default function Archive() {
     pageTurnSound.current.volume = 0.6;
   }, []);
 
+  useEffect(() => {
+    const frame = requestAnimationFrame(() => {
+      setIsEntering(false);
+    });
+
+    return () => cancelAnimationFrame(frame);
+  }, []);
+
   async function loadConfessions() {
     try {
-      const res = await fetch("http://10.151.0.93/confessions", {
+      const res = await fetch("http://10.151.0.93:81/confessions", {
         cache: "no-store",
       });
 
@@ -82,13 +95,20 @@ export default function Archive() {
     }, 900);
   }
 
+  function handleBackToChurch() {
+    setIsLeaving(true);
+    setTimeout(() => {
+      router.push("/church");
+    }, PAGE_FADE_MS);
+  }
+
   async function absolve(id) {
     if (!confirm("Strike this confession from the Book?")) return;
 
     setDeleting(true);
 
     try {
-      const res = await fetch(`http://10.151.0.93/confessions/${id}`, {
+      const res = await fetch(`http://10.151.0.93:81/confessions/${id}`, {
         method: "DELETE",
       });
 
@@ -111,12 +131,13 @@ export default function Archive() {
   const confession = confessions[page];
 
   return (
-    <main className="min-h-screen bg-[#17100b] flex items-center justify-center p-8 overflow-hidden">
+    <main className="relative font-eagle min-h-screen bg-[#17100b] flex items-center justify-center p-8 overflow-hidden">
       {/* candlelight */}
       <div
         className="
           absolute
           inset-0
+          font-eagle
           pointer-events-none
           bg-[radial-gradient(circle_at_center,rgba(255,210,120,0.18),transparent_55%)]
         "
@@ -132,7 +153,7 @@ export default function Archive() {
 
       {!loading && confession && (
         <>
-          <div className={styles.scene}>
+          <div className={`${styles.scene} font-eagle`}>
             <div className={styles.book}>
               <div className={styles.leftPage}>
                 <h1
@@ -147,11 +168,11 @@ export default function Archive() {
                   Book of Confessions
                 </h1>
 
-                <div className="text-center text-7xl text-[#7a4c28] mt-12">
-                  ❦
+                <div className=" flex justify-center text-7xl text-[#7a4c28] mt-12">
+                  <FaCross/>
                 </div>
 
-                <p className="text-center italic text-xl mt-12">
+                <p className="text-center font-eagle italic text-xl mt-12">
                   Page {page + 1}
                 </p>
 
@@ -210,6 +231,8 @@ export default function Archive() {
                   <button
                     onClick={() => absolve(confession.id)}
                     className="
+                    cursor-pointer
+
                       mt-8
                       rounded
                       bg-[#7d2e17]
@@ -228,9 +251,10 @@ export default function Archive() {
 
           <div className="absolute bottom-8 flex items-center gap-8">
             <button
-              onClick={() => router.push("/church")}
+              onClick={handleBackToChurch}
               className="
                 rounded
+                cursor-pointer
                 bg-[#4c2b18]
                 px-6
                 py-3
@@ -246,6 +270,7 @@ export default function Archive() {
               className="
                 rounded
                 bg-[#4c2b18]
+                cursor-pointer
                 px-6
                 py-3
                 text-amber-100
@@ -264,6 +289,7 @@ export default function Archive() {
               disabled={page === confessions.length - 1}
               className="
                 rounded
+                cursor-pointer
                 bg-[#4c2b18]
                 px-6
                 py-3
@@ -276,6 +302,11 @@ export default function Archive() {
           </div>
         </>
       )}
+      <div
+        className={`pointer-events-none fixed inset-0 z-50 bg-black transition-opacity duration-[1500ms] ${
+          isEntering || isLeaving ? "opacity-100" : "opacity-0"
+        }`}
+      />
     </main>
   );
 }

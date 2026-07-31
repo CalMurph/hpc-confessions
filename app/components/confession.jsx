@@ -78,7 +78,7 @@ export default function ConfessionPage() {
             "text": confession
         }
 
-        const penanceRequest = fetch("http://10.151.0.93/confessions", {
+        const penanceRequest = fetch("http://10.151.0.93:81/confessions", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
