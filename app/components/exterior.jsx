@@ -1,14 +1,21 @@
 'use client'
 
 import { useRouter } from "next/navigation"
-import { useRef, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 
 export default function ChurchPage() {
     const router = useRouter()
+    const [isEntering, setIsEntering] = useState(true)
     const [isLeaving, setIsLeaving] = useState(false)
-        const audioRef = useRef(null)
+    const audioRef = useRef(null)
 
-   
+    useEffect(() => {
+        const frame = requestAnimationFrame(() => {
+            setIsEntering(false)
+        })
+
+        return () => cancelAnimationFrame(frame)
+    }, [])
 
     function handleConfessionalClick() {
         setIsLeaving(true)
@@ -33,12 +40,12 @@ export default function ChurchPage() {
                 type="button"
                 
                 onClick={handleConfessionalClick}
-                className="flex justify-center border-[#FFD700] text-[#FFD700] px-20 py-4 bg-[#301934] text-2xl items-center cursor-pointer rounded-full border transition hover:-translate-y-3 duration-1700"
+                className="flex justify-center border-[#FFD700] text-[#FFD700] px-20 py-4 bg-[#301934] text-2xl items-center cursor-pointer rounded-full border transition hover:-translate-y-3 duration-[1700ms]"
             >Enter</button>
             </div>
             <div
                 className={`pointer-events-none fixed inset-0 z-50 bg-black transition-opacity duration-[1500ms] ${
-                    isLeaving ? 'opacity-100' : 'opacity-0'
+                    isEntering || isLeaving ? 'opacity-100' : 'opacity-0'
                 }`}
             />
         </div>
