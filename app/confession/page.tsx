@@ -1,8 +1,8 @@
 import Image from "next/image";
-import Exterior from "../app/components/exterior"
+import Confession from "../components/confession"
 
 export default function Home() {
   return (
-    <Exterior/>
+    <Confession/>
   );
 }
